@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lunaticaela | Portfólio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-light: #fff0f6;
+      --bg-dark: #1e1b2e;
+      --text-light: #4b2e2e;
+      --text-dark: #fce4ec;
+      --primary: #ff69b4;
+      --primary-hover: #ff85c1;
+      --accent-light: #ffb6c1;
+      --accent-dark: #ff99cc;
+      --footer-light: #a17070;
+      --footer-dark: #d18ea3;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      transition: background-color 0.6s ease, color 0.6s ease;
+      background-image: url('imagens/banner-lunaticaela.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-attachment: fixed;
+    }
+
+    .dark-mode {
+      --bg-light: #1e1b2e;
+      --text-light: #fce4ec;
+      --footer-light: #d18ea3;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 16px;
+      margin-top: 2rem;
+      animation: fadeIn 1.2s ease-in;
+      backdrop-filter: blur(6px);
+    }
+
+    .dark-mode .container {
+      background-color: rgba(30, 27, 46, 0.8);
+    }
+
+    .profile-img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 5px solid var(--accent-light);
+      transition: transform 0.4s ease;
+    }
+
+    .dark-mode .profile-img {
+      border-color: var(--accent-dark);
+    }
+
+    .profile-img:hover {
+      transform: scale(1.05);
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+      color: #d63384;
+    }
+
+    .dark-mode h1 {
+      color: #ffc1e3;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-light);
+    }
+
+    .dark-mode p {
+      color: var(--text-dark);
+    }
+
+    .links a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.8rem 1.5rem;
+      background-color: var(--primary);
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .links a:hover {
+      background-color: var(--primary-hover);
+      transform: scale(1.05);
+    }
+
+    iframe {
+      width: 100%;
+      height: 480px;
+      border: none;
+      border-radius: 12px;
+      margin-top: 2rem;
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.2);
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: var(--footer-light);
+    }
+
+    .dark-mode footer {
+      color: var(--footer-dark);
+    }
+
+    .toggle-theme {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.6rem 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+      z-index: 1000;
+      transition: background-color 0.3s ease;
+    }
+
+    .toggle-theme:hover {
+      background-color: var(--primary-hover);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .profile-img {
+        width: 150px;
+        height: 150px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .links a {
+        padding: 0.6rem 1.2rem;
+      }
+
+      iframe {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle-theme" onclick="toggleTheme()">🌓 Modo</button>
+  <div class="container">
+    <img src="foto.png" alt="Lunaticaela" class="profile-img">
+    <h1>Lunaticaela</h1>
+    <p>Streamer & Criadora de Conteúdo 🌸<br>Sempre conectada, sempre criativa!</p>
+
+    <div class="links">
+      <a href="https://www.twitch.tv/lunaticaela" target="_blank">🎮 Twitch</a>
+      <a href="https://discord.com/invite/ZUt5Vxjvmq" target="_blank">💬 Discord</a>
+      <a href="https://www.instagram.com/elamicaelaa/" target="_blank">📸 Instagram</a>
+      <a href="https://livepix.gg/lunaticaela" target="_blank">🎁 LivePix</a>
+    </div>
+
+    <footer>
+      © 2025 Lunaticaela – Todos os direitos reservados
+    </footer>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+</body>
+</html>
